@@ -13,6 +13,12 @@
   --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -1,3 +1,6 @@
+import tirupatePreview from "../assets/tirupate-preview.png";
+import luxshadePreview from "../assets/luxshade-preview.png";
+
 export const PROFILE = {
   name: "Sabal Bhandari",
   role: "Full-stack development. Built to ship.",
@@ -11,13 +14,13 @@ export const PROFILE = {
 export const ABOUT = {
   heading: "Learn by building.",
   lead: "A BSc (Hons) Computing student at Islington College who picks up new tools the same way you'd learn a trade — on a real job, with real stakes.",
-  detail: "Currently building Tirupate, a project-management platform for my father's construction company, while learning React, Node, and PostgreSQL along the way. Also comfortable across Java, Python, and Unity/C#.",
+  detail: "Currently building Tirupate, a project-management platform for construction company, while learning React, Node, and PostgreSQL along the way. Also comfortable across Java, Python, and Unity/C#.",
 };
 
 export const STATS = [
-  { num: "5+", label: "Projects shipped" },
-  { num: "4", label: "AWS certifications" },
-  { num: "7.5", label: "IELTS band score" },
+  { num: 5, suffix: "+", label: "Projects shipped" },
+  { num: 4, suffix: "", label: "AWS certifications" },
+  { num: 7.5, suffix: "", label: "IELTS band score" },
 ];
 
 export const SKILLS = [
@@ -44,6 +47,7 @@ export const PROJECTS = [
     tech: ["React", "Node.js", "Express", "PostgreSQL"],
     link: "https://github.com/SabalBhandari/Tirupate",
     status: "In progress",
+    image: tirupatePreview,
   },
   {
     name: "LuxShade",
@@ -53,6 +57,7 @@ export const PROJECTS = [
     tech: ["Java", "Servlets", "JSP", "Tomcat"],
     link: "https://github.com/SabalBhandari/luxShade",
     status: "Complete",
+    image: luxshadePreview,
   },
   {
     name: "Gym Management System",
@@ -62,6 +67,7 @@ export const PROJECTS = [
     tech: ["Java", "Swing"],
     link: null,
     status: "Complete",
+    image: null,
   },
   {
     name: "Inventory System",
@@ -71,6 +77,7 @@ export const PROJECTS = [
     tech: ["Python"],
     link: null,
     status: "Complete",
+    image: null,
   },
 ];
 
@@ -79,4 +86,15 @@ export const CERTS = [
   "AWS Academy Machine Learning Foundations",
   "AWS Academy Machine Learning for Natural Language Processing",
   "AWS Academy Data Engineering",
+];
+
+export const COMMANDS = [
+  { label: "Go to About", type: "nav", target: "about" },
+  { label: "Go to Skills", type: "nav", target: "skills" },
+  { label: "Go to Work", type: "nav", target: "work" },
+  { label: "Go to Certifications", type: "nav", target: "certs" },
+  { label: "Go to Contact", type: "nav", target: "contact" },
+  { label: "Open GitHub", type: "link", target: PROFILE.github },
+  { label: "Open LinkedIn", type: "link", target: PROFILE.linkedin },
+  { label: "Email me", type: "link", target: `mailto:${PROFILE.email}` },
 ];
