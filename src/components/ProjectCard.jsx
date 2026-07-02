@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
                         <img
                             src={project.image}
                             alt={`${project.name} preview`}
-                            className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                            className="w-full h-auto object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         />
                     </div>
                 </div>
@@ -38,6 +38,7 @@ export default function ProjectCard({ project }) {
                         </span>
                     ))}
                 </div>
+
                 <div className="flex items-center gap-4 mt-6">
                     {project.link && (<a
 
@@ -58,8 +59,7 @@ export default function ProjectCard({ project }) {
                         </Link>
                     )}
                 </div>
-
             </div>
-        </div >
+        </div>
     );
 }

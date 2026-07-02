@@ -2,8 +2,8 @@ import { PROFILE, STATS } from "../data/content";
 import { useReveal } from "../hooks/useReveal";
 import { useCountUp } from "../hooks/useCountUp";
 
-function StatItem({ stat, trigger }) {
-  const value = useCountUp(stat.num, trigger);
+function StatItem({ stat, trigger, duration }) {
+  const value = useCountUp(stat.num, trigger, duration);
   return (
     <div className="text-center">
       <div className="text-3xl sm:text-4xl font-extrabold">
@@ -15,10 +15,10 @@ function StatItem({ stat, trigger }) {
 }
 
 export default function Hero() {
-  const [ref, visible] = useReveal();
+  const [statsRef, visible] = useReveal();
 
   return (
-    <section id="hero" className="relative overflow-hidden text-center px-6 pt-40 pb-36">
+    <section id="hero" className="relative overflow-hidden text-center px-6 pt-44 pb-36">
       <div className="absolute -top-56 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-blue/30 blur-[90px] pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl mx-auto">
@@ -43,9 +43,9 @@ export default function Hero() {
           </a>
         </div>
 
-        <div ref={ref} className="flex justify-center gap-10 sm:gap-16 mt-20 flex-wrap">
-          {STATS.map((stat) => (
-            <StatItem key={stat.label} stat={stat} trigger={visible} />
+        <div ref={statsRef} className="flex justify-center gap-10 sm:gap-16 mt-20 flex-wrap">
+          {STATS.map((stat, i) => (
+            <StatItem key={stat.label} stat={stat} trigger={visible} duration={1800 + i * 400} />
           ))}
         </div>
       </div>
