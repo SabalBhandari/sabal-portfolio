@@ -41,6 +41,7 @@ export const SKILLS = [
 export const PROJECTS = [
   {
     name: "Tirupate",
+    slug: "tirupate",
     tagline: "Construction project management system",
     description:
       "Project tracking, budget management, daily progress logs, vehicle tracking, crew management, and document storage — built for my father's construction company.",
@@ -48,9 +49,22 @@ export const PROJECTS = [
     link: "https://github.com/SabalBhandari/Tirupate",
     status: "In progress",
     image: tirupatePreview,
+    caseStudy: {
+      overview:
+        "My father runs a construction company handling roads and infrastructure projects, and everything — budgets, crew schedules, daily site logs — was being tracked across scattered spreadsheets and phone calls. Tirupate is my attempt to bring that under one roof.",
+      role: "Solo developer — designed and built both frontend and backend from scratch.",
+      challenges: [
+        "Modeling role-based access so admins and site managers see different views of the same project data without duplicating logic.",
+        "Designing a daily-logs schema flexible enough for varied entry types (labor, materials, weather delays) without becoming a mess of nullable columns.",
+        "Learning PostgreSQL relational design hands-on, coming from a more document-style mental model.",
+      ],
+      future:
+        "Planning to integrate GPS tracking from company vehicles for automated equipment status detection — so equipment location and utilization update without manual entry.",
+    },
   },
   {
     name: "LuxShade",
+    slug: "luxshade",
     tagline: "Full-stack e-commerce platform",
     description:
       "E-commerce site for premium eyewear brands — server-side functionality, landing page, and a database-driven backend.",
@@ -58,9 +72,21 @@ export const PROJECTS = [
     link: "https://github.com/SabalBhandari/luxShade",
     status: "Complete",
     image: luxshadePreview,
+    caseStudy: {
+      overview:
+        "A luxury sunglasses e-commerce concept built to practice full MVC architecture in Java — from the responsive landing page down to session-managed login and registration.",
+      role: "Backend architecture, login/registration system, and landing page frontend, as part of a small team.",
+      challenges: [
+        "Migrating from javax.servlet to jakarta.servlet to run correctly on Tomcat 10 — a naming-convention change that broke every import until I traced it down.",
+        "A case-sensitive database name mismatch that caused a hard-to-diagnose 'no database selected' error during team database sharing via XAMPP/phpMyAdmin.",
+        "Coordinating Git branching and pull requests across a team without stepping on each other's merge conflicts.",
+      ],
+      future: null,
+    },
   },
   {
     name: "Gym Management System",
+    slug: "gym-management-system",
     tagline: "Desktop member & membership manager",
     description:
       "GUI-based desktop application applying object-oriented design principles to manage gym members.",
@@ -68,9 +94,11 @@ export const PROJECTS = [
     link: null,
     status: "Complete",
     image: null,
+    caseStudy: null,
   },
   {
     name: "Inventory System",
+    slug: "inventory-system",
     tagline: "Stock, sales & invoicing tool",
     description:
       "Product management, stock updates, sales processing, invoice generation, and file handling.",
@@ -78,6 +106,7 @@ export const PROJECTS = [
     link: null,
     status: "Complete",
     image: null,
+    caseStudy: null,
   },
 ];
 

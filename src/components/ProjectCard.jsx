@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProjectCard({ project }) {
     return (
         <div className="group relative bg-gradient-to-b from-surface to-[#151517] border border-surface-border rounded-[28px] overflow-hidden text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-blue/40 hover:shadow-[0_20px_60px_-20px_rgba(41,151,255,0.35)]">
@@ -36,18 +38,28 @@ export default function ProjectCard({ project }) {
                         </span>
                     ))}
                 </div>
+                <div className="flex items-center gap-4 mt-6">
+                    {project.link && (<a
 
-                {project.link && (<a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-blue text-sm font-semibold hover:underline"
+                    >
+                        View on GitHub →
+                    </a>
+                    )}
+                    {project.caseStudy && (
+                        <Link
+                            to={`/projects/${project.slug}`}
+                            className="inline-flex items-center gap-1 text-text-dim text-sm font-semibold hover:text-text transition"
+                        >
+                            Read case study →
+                        </Link>
+                    )}
+                </div>
 
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 mt-6 text-blue text-sm font-semibold hover:underline"
-                >
-                    View on GitHub →
-                </a>
-                )}
             </div>
-        </div>
+        </div >
     );
 }
