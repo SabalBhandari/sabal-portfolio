@@ -6,8 +6,10 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CaseStudy from "./pages/CaseStudy";
+import { useHashScroll } from "./hooks/useHashScroll";
 
 export default function App() {
+  useHashScroll();
   return (
     <div className="bg-bg text-text min-h-screen">
       <CustomCursor />
