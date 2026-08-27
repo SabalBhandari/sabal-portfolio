@@ -7,7 +7,7 @@ export const PROFILE = {
   location: "Kathmandu, Nepal",
   phone: "+977 9841205103",
   email: "sabalbhandari.7@gmail.com",
-  linkedin: "https://linkedin.com/in/sabalbhandari",
+  linkedin: "https://www.linkedin.com/in/sabalbhandari7/",
   github: "https://github.com/SabalBhandari",
 };
 
