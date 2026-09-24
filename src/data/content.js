@@ -19,8 +19,8 @@ export const ABOUT = {
 
 export const STATS = [
   { num: 3, suffix: "+", label: "Full-Stack Projects " },
-  { num: 10, suffix: "", label: "Technologies Used" },
-  { num: 20, suffix: "", label: "DSA Problems Solved" },
+  { num: 10, suffix: "+", label: "Technologies Used" },
+  { num: 20, suffix: "+", label: "DSA Problems Solved" },
 ];
 
 export const SKILLS = [
