@@ -18,9 +18,9 @@ export const ABOUT = {
 };
 
 export const STATS = [
-  { num: 5, suffix: "+", label: "Projects shipped" },
-  { num: 4, suffix: "", label: "AWS certifications" },
-  { num: 7.5, suffix: "", label: "IELTS band score" },
+  { num: 3, suffix: "+", label: "Full-Stack Projects " },
+  { num: 4, suffix: "", label: "Projects in Production" },
+  { num: "Open", suffix: "", label: "For Internship Opportunities" },
 ];
 
 export const SKILLS = [
